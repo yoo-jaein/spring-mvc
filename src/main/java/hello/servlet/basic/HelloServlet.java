@@ -27,5 +27,8 @@ public class HelloServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8"); //header Content-Type 설정. 문자 인코딩은 utf-8을 쓰자
 		response.getWriter().write("hello " + username);
 
+		request.getParameterValues(username);
+		// GET 쿼리 파라미터와 POST HTML Form은 서버에서 받을 때 형식이 같다.
+		// 그래서 request.getParameter()는 GET URL 쿼리 파라미터 형식도 지원하고 POST HTML Form 형식도 지원한다.
 	}
 }
